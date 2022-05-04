@@ -109,7 +109,7 @@ type ApplyUpgradeOptions struct {
 	// InfrastructureProviders instance and versions (e.g. capa-system/aws:v0.5.0) to upgrade to. This field can be used as alternative to Contract.
 	InfrastructureProviders []string
 
-	// WaitProviders instructs the upgrade apply command to wait till the providers are installed.
+	// WaitProviders instructs the upgrade apply command to wait till the providers are successfully upgraded.
 	WaitProviders bool
 
 	// WaitProviderTimeout sets the timeout per provider wait installation

@@ -78,9 +78,9 @@ func init() {
 	upgradeApplyCmd.Flags().StringSliceVarP(&ua.controlPlaneProviders, "control-plane", "c", nil,
 		"ControlPlane providers instance and versions (e.g. capi-kubeadm-control-plane-system/kubeadm:v0.3.0) to upgrade to. This flag can be used as alternative to --contract.")
 	upgradeApplyCmd.Flags().BoolVar(&ua.waitProviders, "wait-providers", false,
-		"Wait for providers to be installed.")
+		"Wait for providers to be upgraded.")
 	upgradeApplyCmd.Flags().IntVar(&ua.waitProviderTimeout, "wait-provider-timeout", 5*60,
-		"Wait timeout per provider installation in seconds. This value is ignored if --wait-providers is false")
+		"Wait timeout per provider upgrade in seconds. This value is ignored if --wait-providers is false")
 }
 
 func runUpgradeApply() error {
